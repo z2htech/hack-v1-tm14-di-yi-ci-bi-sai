@@ -43,7 +43,7 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 
 ```
 /agent-dropverse
-├── character.json               # Agent 性格与语气设定
+├── character.json                              # Agent 性格与语气设定
 ├── knowledge/
 │   ├── character_airdrop_signal.md             #空投快照基础
 │   ├── character_airdrop_tutorial01.md         #空投教程模板1
@@ -60,9 +60,9 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 │   └── character_task_platform.md              #任务平台与公售关联
 │   └── character_TGE.md                        #TGE/空投基础信号识别
 ├── packages/
-|   ├── client-twitter            # 处理Agent在Twitter上的执行动作
-|   ├── rootdata                  # 爬起Rootdata上的项目方数据
-|   ├── plugin-image              # 支持阅读图片的能力
+|   ├── client-twitter                          # 处理Agent在Twitter上的执行动作
+|   ├── rootdata                                # 爬起Rootdata上的项目方数据
+|   ├── plugin-image                            # 支持阅读图片的能力
 
 ```
 ### 🧠 知识库模块总览（`/knowledge`）
