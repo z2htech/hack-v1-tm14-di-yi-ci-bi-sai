@@ -45,17 +45,45 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 /agent-dropverse
 ├── character.json               # Agent 性格与语气设定
 ├── knowledge/
-│   ├── tge_basics.txt           # TGE 基础概念知识
-│   ├── fake_airdrop_warnings.txt  # 钓鱼空投识别规则
-│   ├── claim_pattern_checklist.txt # Claim 页面上线前信号
-│   ├── alpha_crosscheck_rules.txt # 多源验证标准
-│   └── verified_kol_list.txt     # 可引用账号名单
+│   ├── character_airdrop_signal.md             #空投快照基础
+│   ├── character_airdrop_tutorial01.md         #空投教程模板1
+│   ├── character_airdrop_tutorial02.md         #空投教程模板1
+│   ├── character_airdrop_tutorial03.md         #空投教程模板1
+│   └── character_airdrop_tutorial04.md         #空投教程模板1
+│   └── character_airdrop_tutorial05.md         #空投教程模板1
+│   └── character_claim_pattern_checklist.md    #Claim 页面知识库
+│   └── character_crosscheck_rules.md           #交叉验证知识库
+│   └── character_fake_airdrop.md               #假空投识别规则
+│   └── character_KOL_trust.md                  #KOL 信任度知识库
+│   └── character_KOL.md                        #KOL 名单知识库
+│   └── character_launchpad.md                  #Launchpad 平台资料
+│   └── character_task_platform.md              #任务平台与公售关联
+│   └── character_TGE.md                        #TGE/空投基础信号识别
 ├── packages/
 |   ├── client-twitter            # 处理Agent在Twitter上的执行动作
 |   ├── rootdata                  # 爬起Rootdata上的项目方数据
 |   ├── plugin-image              # 支持阅读图片的能力
 
 ```
+### 🧠 知识库模块总览（`/knowledge`）
+
+| 文件名                           | 用途说明                                                                                     | 简介                       |
+|----------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------|
+| `character_airdrop_signal.md`     | 理解空投定义、作用、信号与参与策略，识别潜在机会与高质量教程                                | 空投快照基础               |
+| `character_airdrop_tutorial01.md` | 判断一篇空投教程是否值得转发，优先筛选结构清晰、链接完整的内容                               | 空投教程模板1             |
+| `character_airdrop_tutorial02.md` | 学习并识别 Bitalk News 的 Monad 系列空投教程                                                 | 空投教程模板2             |
+| `character_airdrop_tutorial03.md` | 理解 Berachain Meme 项目生态及其参与方式                                                     | 空投教程模板3             |
+| `character_airdrop_tutorial04.md` | 辨别 AIWayfinder 项目的空投机制与交互流程                                                   | 空投教程模板4             |
+| `character_airdrop_tutorial05.md` | 对空投参与类型与预热行为再做总结                                                             | 空投教程模板5             |
+| `character_claim_pattern_checklist.md` | 识别 Claim 页面即将上线的动线、合约部署、媒体节奏等信号                                | Claim 页面知识库          |
+| `character_crosscheck_rules.md`   | 多源交叉验证机制，判断 TGE/空投类消息是否值得播报                                            | 交叉验证知识库             |
+| `character_fake_airdrop.md`       | 帮助识别假空投与钓鱼行为，避免误导转发与签名授权                                              | 假空投识别规则             |
+| `character_KOL_trust.md`          | 评估 Web3 KOL 发言质量，判断是否为可信内容                                                    | KOL 信任度知识库           |
+| `character_KOL.md`                | 辨别哪些 KOL 的内容可以引用、总结或转发                                                       | KOL 名单知识库               |
+| `character_launchpad.md`          | 理解 Launchpad 平台与发币、公售、IDO 的关系与平台可信度评估                                   | Launchpad 平台资料         |
+| `character_task_platform.md`      | 通过任务平台识别可能发币/空投项目，判断任务可信度与激励模式                                   | 任务平台与公售关联         |
+| `character_TGE.md`                | 综合信号判断项目是否接近 TGE，确保所有预测有链上/平台/教程/合约等依据                         | TGE/空投基础信号识别      |
+
 
 ## 数据来源
 - Twitter账户（官方项目账号、KOL）
