@@ -157,7 +157,7 @@ Phala 提供去中心化的云计算平台，开发人员可以在不依赖中�
 
 
 ## DEMO视频/图片
-
+这里👉点这个！！https://drive.google.com/file/d/11J6Vo63d1Twrp2EyM9stKLURIztiGL36/view?usp=sharing
 
 ## 免责声明
 Drop Verse 仅发布可验证信息，不提供财务建议、不预测市场走势、不转发虚假内容。所有用户请自行判断与研究（DYOR）。
