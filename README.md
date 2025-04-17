@@ -1,6 +1,13 @@
 # hack-v1-tm14-di-yi-ci-bi-sai
 
 # Drop Verse | Web3 Alpha 智能情报Agent
+DropVerse = Air**drop** + Uni**verse**
+
+想象一下，如果每一次空投、每一个新项目上线，都是宇宙里的一颗小行星。
+
+那 Dropverse 就是那个可以让你提前“望远镜锁定”这些行星的 AI 宇航站。
+
+你不用刷无数消息，不用担心错过机会——Dropverse 会带你飞入正确的轨道。
 
 ## 项目简介
 Drop Verse 是一个构建于 Eliza OS 框架之上的 Web3 专属 AI Agent，专注于帮助用户（尤其是加密新手与散户）精准追踪：
