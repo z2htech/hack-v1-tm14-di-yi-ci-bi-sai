@@ -12,6 +12,8 @@ Drop Verse 是一个构建于 Eliza OS 框架之上的 Web3 专属 AI Agent，�
 
 Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可验证信息。
 
+<img width="609" alt="image" src="https://github.com/user-attachments/assets/6392a8bf-dab5-4956-9440-8d53290260e0" />
+
 理念：
 - 帮助推广小型中文区Web3博主，让更多人看到他们的作品，不让顶部KOL控制
 - 整合所有信息，让散户通过我们的Agent获取市场上所有可能在Web3赚钱的机会（不包含任何合约行为或金融建议）
@@ -35,7 +37,7 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 **3. 引用转推系统**  
 自动引用或转发可信账号内容，并使用自身语气重新组织语言发布，无虚构、无主观评价。
 
-**5. 多源交叉验证机制**  
+**4. RAG验证机制**  
 依据知识库规则对代币消息进行来源验证和内容一致性比对，提高信息可信度。
 
 
@@ -47,10 +49,10 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 ├── knowledge/
 │   ├── character_airdrop_signal.md             #空投快照基础
 │   ├── character_airdrop_tutorial01.md         #空投教程模板1
-│   ├── character_airdrop_tutorial02.md         #空投教程模板1
-│   ├── character_airdrop_tutorial03.md         #空投教程模板1
-│   └── character_airdrop_tutorial04.md         #空投教程模板1
-│   └── character_airdrop_tutorial05.md         #空投教程模板1
+│   ├── character_airdrop_tutorial02.md         #空投教程模板2
+│   ├── character_airdrop_tutorial03.md         #空投教程模板3
+│   └── character_airdrop_tutorial04.md         #空投教程模板4
+│   └── character_airdrop_tutorial05.md         #空投教程模板5
 │   └── character_claim_pattern_checklist.md    #Claim 页面知识库
 │   └── character_crosscheck_rules.md           #交叉验证知识库
 │   └── character_fake_airdrop.md               #假空投识别规则
@@ -89,7 +91,6 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 - Twitter账户（官方项目账号、KOL）
 - Rootdata的项目方名单
 
-
 ## 使用场景
 - 想获取第一手发币/空投信息的加密新人
 - 想精准埋伏公售/交互任务的链上用户
@@ -101,6 +102,7 @@ Drop Verse 不发布臆测、不制造噪音，仅转发来自可信来源的可
 - Node 23.3 + Typescript
 - Twitter 插件（agent-twitter-client）
 - JSON
+- Phala Network TEE
 
 ## 整体流程
 ```mermaid
@@ -125,6 +127,27 @@ flowchart TD
     Verify1 -- 否 --> Start
     Verify2 -- 否 --> Start
 ```
+
+## 细节
+1. 在client-twitter的执行中，为了体现Agent能够准确理解“引用转帖”的意图，在代码中我们并没有取消点赞、转帖、回复等判定功能，完全是由大模型去给出Agent的下一步行为。
+2. 我们选择两个不同的搜索条件目的是除了让用户获取最好的咨询外，也不会错过一些可能的机会，同时也能帮助到一些体量小的KOL的文章能被更多人发现。
+3. 为了只提取中文推文，在搜索上要求必须在后面添加lang:zh-cn，并且让大模型识别一些可能类似广告的推文，排除这部分的推文。
+4. 整个过程只使用了gpt-4o mini模型，包括读取图片，发推，判别动作。
+
+## 部署至Phala Network
+Phala Network 是建立在 Polkadot 生态系统上的隐私保护云计算服务。它利用一种名为可信执行环境 (TEE) 的独特技术来创建用于处理敏感数据的安全和私密环境。该网络旨在提供一个去中心化的基础架构，允许开发人员部署机密智能合约（称为 Fat Contracts），这些合约即使在公共区块链上也能保证隐私。
+
+Phala 提供去中心化的云计算平台，开发人员可以在不依赖中心化基础设施的情况下部署和运行应用程序。该模型不仅增强了安全性，而且还通过在节点网络中分配工作负载来确保可扩展性。
+
+<img width="802" alt="image" src="https://github.com/user-attachments/assets/ed64482c-fce6-49c5-a96d-084a9b868842" />
+
+<img width="1421" alt="image" src="https://github.com/user-attachments/assets/ef31d57f-93a8-485c-a20b-b606faec6f9e" />
+
+
+## 成本
+部署上Phala Network的平均成本每小时$0.27，而大模型的平均成本每小时大约$0.5左右。也就是一天大约需花费$18左右。
+<img width="1070" alt="image" src="https://github.com/user-attachments/assets/a1d37da8-2e40-4c81-8804-7887b30ea563" />
+
 
 ## DEMO视频/图片
 
